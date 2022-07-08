@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Неявный грид -->
+    <title>Implicit grid</title>
+    <style>
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 60px 60px;
+            gap: 10px;
+            /* задаст высоту строки для гридов
+            выпавших из сетки (т.е. неявные гриды) */
+
+            /* grid-auto-rows: 60px; */
+
+            /* позволяет изменить перенос неявных гридов из строки (по умолч.) в колонку */
+            grid-auto-flow: column;
+            /* задаст ширину строки для гридов
+            выпавших из сетки (т.е. неявные гриды) */
+            grid-auto-columns: 1fr; 
+
+
+        }
+        .grid > div {
+            background-color: gold;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<head>
+    <!-- если вдруг не работаеют эмметы, то найстройки - emmet  в поле поиска - inline и предпоследнюю найстройку включить -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid template example</title>
+    <style>
+        .wrapper {
+            display: grid;
+            grid-template-columns: 100px 100px 100px;
+            /* grid-template-columns: 10px repeat(1, 1fr) 50px; */
+            grid-template-rows: 100px 100px 100px;
+            /* grid-row-gap: 10px; свойство устарело, лучше использовать
+            свойства ниже */
+            column-gap: 10px;
+            row-gap: 10px;
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .color {
+            text-align: center;
+        }
+
+        .red {
+            background-color: red;
+            /* объединяет по вертикальным грид лайнам, 
+            если что подпись лайнов можно увидеть в инспекторе ф12, через нажатие на grid */
+            grid-column: 1/3;
+            /* объединяет по горизонтальным грид лайнам  
+            grid-row: 1/4;*/
+        }
+
+        .yellow {
+            background-color: yellow;
+        }
+
+        .green {
+            background-color: green;
+            grid-row: 2/4;
+        }
+
+        .blue {
+            background-color: blue;
+            grid-column: 2/4;
+        }
+
+        .violet {
+            background-color: violet;
+        }
+
+        .coral {
+            background-color: coral;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <div class="color red">1</div>
+        <div class="color yellow">2</div>
+        <div class="color green">3</div>
+        <div class="color blue">4</div>
+        <div class="color violet">5</div>
+        <div class="color coral">6</div>
+    </div>
+
+</body>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- адаптивный грид -->
+    <title>Responsive grid</title>
+    <style>
+
+        .grid {
+            display: grid;
+            gap: 4px;
+            /* auto-fill - непоред константа и все элементы в неё попадут */
+            /* minmax (1 идёт по этому, если доходит до 1 значения то 
+            применяет второе) */
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        }
+
+        .grid > div {
+            text-align: center;
+            background-color: gold;
+            padding: .5em;
+            font-size: 4vw;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+    </div>
+</body>
+</html>
